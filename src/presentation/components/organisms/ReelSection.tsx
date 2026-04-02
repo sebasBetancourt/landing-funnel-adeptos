@@ -13,7 +13,6 @@ export default function ReelSection() {
         if (entry.isIntersecting) {
           videoRef.current?.play().catch(() => {
             // Autoplay might be blocked by browser if not muted/interacted with
-            // Though muted should fix it.
           });
         } else {
           videoRef.current?.pause();
@@ -48,7 +47,6 @@ export default function ReelSection() {
                  <video 
                    ref={videoRef}
                    src={reelSection.videoUrl}
-                   muted
                    loop
                    playsInline
                    className="w-full h-full object-cover"

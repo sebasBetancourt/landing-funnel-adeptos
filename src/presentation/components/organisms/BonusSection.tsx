@@ -57,7 +57,7 @@ export default function BonusSection() {
            <p className="text-xl text-gray-400 font-medium uppercase tracking-tight max-w-2xl mx-auto">
               This kit is tailored for your business and industry. <span className="text-black font-black italic">Start building today.</span>
            </p>
-           <Link href="#" className="inline-block bg-black text-white px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-black transition-all shadow-2xl">
+           <Link href="/audit" className="inline-block bg-black text-white px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-black transition-all shadow-2xl">
               Claim Your Kit → Book AI Audit
            </Link>
         </div>

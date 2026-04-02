@@ -23,20 +23,7 @@ export default function Footer() {
            <div className="text-[10px] font-black uppercase tracking-[0.6em] text-white/40">ADEPTOS AGENCY</div>
         </div>
 
-        {/* Navigation Grid */}
-        <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12">
-           {footer.nav.map(item => (
-             <Link 
-               key={item.label} 
-               href={item.href} 
-               className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-white/60 hover:text-primary transition-colors"
-             >
-               {item.label}
-             </Link>
-           ))}
-        </nav>
-
-        {/* Social Icons */}
+           {/* Social Icons */}
         <div className="flex items-center gap-8">
            {footer.socials.map((social, i) => (
              <Link 

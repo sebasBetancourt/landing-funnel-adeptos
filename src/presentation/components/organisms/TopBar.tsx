@@ -26,8 +26,8 @@ export default function TopBar() {
   const { socials, utility } = landingData.navigation;
 
   return (
-    <div className="w-full h-10 flex items-center justify-between px-6 md:px-12 text-[9px] font-black uppercase tracking-[0.2em] bg-black/40 backdrop-blur-md border-b border-white/5">
-      <div className="flex gap-6 items-center">
+    <div className="w-full h-10 flex items-center justify-between px-4 sm:px-12 text-[9px] font-black uppercase tracking-[0.2em] bg-black/40 backdrop-blur-md border-b border-white/5">
+      <div className="flex gap-4 items-center">
         {socials.map((social) => {
           const Icon = Icons[social.icon as keyof typeof Icons];
           return (

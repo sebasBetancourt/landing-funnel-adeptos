@@ -1,16 +1,19 @@
 import { landingData } from "@/data/landing";
-
+import Link from "next/link";
+        
 export default function DiscountBadge() {
   const { offer } = landingData;
 
   return (
-    <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[60] group cursor-pointer">
+    <div className="hidden md:block fixed left-0 top-1/2 -translate-y-1/2 z-[60] group cursor-pointer">
       <div className="bg-black text-white px-3 py-6 rounded-r-xl border-y border-r border-white/10 shadow-[20px_0_40px_rgba(0,0,0,0.4)] transition-all duration-500 group-hover:pl-6 group-hover:bg-primary group-hover:text-black">
         <div className="flex flex-col items-center gap-1">
           {/* Vertical Text Orientation */}
-          <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-black uppercase tracking-[0.4em] whitespace-nowrap">
-            {offer.label}
-          </span>
+          <Link href="/audit">
+            <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-black uppercase tracking-[0.4em] whitespace-nowrap">
+              {offer.label}
+            </span>
+          </Link> 
           <div className="w-1 h-12 bg-primary group-hover:bg-black transition-colors mt-2" />
         </div>
       </div>

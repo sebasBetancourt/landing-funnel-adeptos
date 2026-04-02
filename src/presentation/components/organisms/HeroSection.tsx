@@ -23,7 +23,7 @@ export default function HeroSection() {
           alt="Founder profile" 
           fill 
           sizes="(max-width: 1024px) 100vw, 60vw"
-          className="object-contain lg:object-left-bottom scale-110 lg:scale-125 origin-left lg:opacity-100 opacity-60"
+          className="object-contain lg:object-left-bottom scale-100 sm:scale-110 lg:scale-125 origin-left lg:opacity-100 opacity-40 sm:opacity-60"
           style={{ objectFit: 'contain', objectPosition: 'left bottom' }}
           priority
         />
@@ -32,7 +32,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-20 flex-1 flex flex-col justify-center w-full px-6 md:px-12">
+      <div className="relative z-20 flex-1 flex flex-col justify-center w-full px-4 sm:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-center gap-12 lg:gap-0 max-w-[1920px] mx-auto min-h-[70vh]">
              
              {/* Left Column (Spacer for Background Image) */}
@@ -41,16 +41,16 @@ export default function HeroSection() {
              {/* Right Column: Value Proposition */}
              <div className="flex flex-col items-center justify-center text-center space-y-10 order-2 pt-10 lg:pt-0 w-full lg:pl-10">
                 <div className="space-y-4">
-                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-[0.3em] text-white drop-shadow-lg">
+                   <h2 className="text-base sm:text-lg md:text-3xl lg:text-4xl font-black uppercase tracking-[0.3em] text-white drop-shadow-lg">
                       {hero.overline}
                    </h2>
-                   <h1 className="text-6xl md:text-8xl lg:text-[100px] xl:text-[120px] font-brand font-black uppercase text-white leading-[0.8] drop-shadow-2xl">
+                   <h1 className="text-[32px] sm:text-6xl md:text-8xl lg:text-[100px] xl:text-[120px] font-brand font-black uppercase text-white leading-[0.8] drop-shadow-2xl">
                       {hero.headline.first} <span className="text-primary">{hero.headline.accent}</span>
                    </h1>
                 </div>
 
                 <div className="space-y-6">
-                   <p className="max-w-xl text-base md:text-lg lg:text-xl font-medium text-white/90 drop-shadow-md leading-relaxed px-4">
+                   <p className="max-w-xl text-[13px] sm:text-base md:text-lg lg:text-xl font-medium text-white/90 drop-shadow-md leading-relaxed px-4">
                       {hero.description}
                    </p>
                    
@@ -58,13 +58,13 @@ export default function HeroSection() {
                       {hero.bullets?.map((bullet, i) => (
                         <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
                            <span className="text-primary text-xs">✓</span>
-                           <span className="text-[10px] font-bold uppercase tracking-widest text-white/80">{bullet}</span>
+                           <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white/80">{bullet}</span>
                         </div>
                       ))}
                    </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12 pt-4 w-full">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 pt-4 w-full">
                    <button className="flex items-center gap-4 group">
                       <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-black shadow-xl group-hover:scale-110 transition-transform">
                          ▶
@@ -72,7 +72,7 @@ export default function HeroSection() {
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] drop-shadow-sm">{hero.secondaryCta}</span>
                    </button>
 
-                   <Link href="#" className="bg-primary text-black px-10 py-5 rounded-md font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-2xl flex items-center gap-3">
+                   <Link href="/audit" className="bg-primary text-black px-6 sm:px-10 py-5 rounded-md font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-2xl flex items-center gap-3">
                       {hero.primaryCta} <span className="text-lg">→</span>
                    </Link>
                 </div>

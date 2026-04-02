@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { landingData } from "@/data/landing";
 
 export default function NewsletterSection() {
   const { newsletter } = landingData;
 
   return (
-    <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden z-30">
+    <section className="relative w-full py-10 h-[700px] flex items-center justify-center overflow-hidden z-30">
       
       {/* Background with Stage/Show Visual and Blur */}
       <div className="absolute inset-0">
@@ -19,7 +20,7 @@ export default function NewsletterSection() {
          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10" />
       </div>
 
-      <div className="relative z-20 text-center space-y-10 px-6 max-w-xl mx-auto">
+      <div className="relative z-20 text-center space-y-10 px-6 py-10 max-w-xl mx-auto">
         <h2 className="text-5xl md:text-7xl font-brand font-black uppercase text-white tracking-tight drop-shadow-2xl">
            {newsletter.headline}
         </h2>
@@ -30,22 +31,12 @@ export default function NewsletterSection() {
            </p>
            
            <div className="space-y-6 pt-4">
-              <input 
-                type="email" 
-                placeholder={newsletter.placeholder} 
-                className="w-full bg-transparent border-b border-white/20 py-4 text-white text-center focus:outline-none focus:border-primary transition-colors text-lg"
-              />
-              
-              {/* Mock Recaptcha Placeholder */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center justify-center gap-4 max-w-xs mx-auto">
-                 <div className="w-6 h-6 border-2 border-primary rounded-sm shadow-inner" />
-                 <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">No soy un robot</span>
-                 <div className="w-8 h-8 opacity-20 grayscale">🛡️</div>
-              </div>
-
-              <button className="w-full bg-primary text-black py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-white transition-all shadow-2xl">
-                 {newsletter.cta}
-              </button>
+              <Link 
+                href="/audit" 
+                className="w-full bg-primary text-black py-5 rounded-full font-brand font-black text-xs uppercase tracking-[0.2em] hover:bg-white transition-all shadow-2xl text-center block"
+              >
+                  {newsletter.cta}
+              </Link>
            </div>
         </div>
       </div>

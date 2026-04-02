@@ -10,15 +10,15 @@ export default function TrustBar() {
           {trust.message}
         </p>
         
-        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16 md:gap-44 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
            {trust.logos.map((logo, index) => (
              <div 
                key={index} 
-               className={`text-white font-brand font-black text-xl md:text-2xl tracking-tighter hover:opacity-100 transition-opacity cursor-default ${
+               className={`flex items-center justify-center text-white font-brand font-black text-xl md:text-2xl tracking-tighter hover:opacity-100 transition-opacity cursor-default ${
                  logo.type === 'special' ? 'text-primary' : ''
                }`}
              >
-               {logo.name}
+               <img src={logo.name} alt="" className="w-20 h-20 sm:w-32 sm:h-32 md:w-44 md:h-44 object-contain" />
              </div>
            ))}
         </div>

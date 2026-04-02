@@ -6,12 +6,12 @@ export default function StatsSection() {
 
   return (
     <section className="bg-white py-24 md:py-32 px-6 md:px-12 relative z-30">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         
         {/* Visual Stats Column */}
         <div className="space-y-12">
            <div className="space-y-4">
-              <h3 className="text-4xl md:text-6xl font-brand font-black uppercase text-black italic tracking-tighter">
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-brand font-black uppercase text-black italic tracking-tighter">
                  {stats.title}
               </h3>
               <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-sm">
@@ -53,7 +53,7 @@ export default function StatsSection() {
         {/* Narrative Side */}
         <div className="space-y-12">
            <div className="space-y-8">
-              <h4 className="text-3xl md:text-5xl font-brand font-black uppercase text-black leading-tight tracking-tighter">
+              <h4 className="text-2xl sm:text-3xl md:text-5xl font-brand font-black uppercase text-black leading-tight tracking-tighter">
                  Your competitors aren't using this yet. <span className="text-gray-300 italic">That won't last.</span>
               </h4>
               <p className="text-xl text-gray-500 font-medium leading-relaxed">
@@ -79,7 +79,7 @@ export default function StatsSection() {
               </p>
            </div>
 
-           <Link href="#" className="inline-block bg-primary text-black px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all shadow-2xl">
+           <Link href="/audit" className="inline-block bg-primary text-black px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all shadow-2xl">
               Book Free AI Audit →
            </Link>
         </div>

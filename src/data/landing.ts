@@ -6,14 +6,9 @@ export const landingData = {
       { name: 'YouTube', href: '#', icon: 'youtube' },
     ],
     utility: [
-      { label: 'Book AI Audit', href: '#', icon: 'calendar' },
-      { label: 'Sign in', href: '#', icon: 'user' },
+      { label: 'Book AI Audit', href: '/audit', icon: 'calendar' },
     ],
     main: [
-      { label: 'Features', href: '#' },
-      { label: 'Results', href: '#' },
-      { label: 'Pricing', href: '#' },
-      { label: 'How it works', href: '#' },
     ],
     cta: 'Book Free AI Audit',
   },
@@ -33,12 +28,10 @@ export const landingData = {
   trust: {
     message: 'Proven Results from Real Clients',
     logos: [
-      { name: 'Starbucks', type: 'text' },
-      { name: 'Amazon', type: 'text' },
-      { name: 'Tesla', type: 'text' },
-      { name: 'CVS', type: 'text' },
-      { name: 'Applebee\'s', type: 'text' },
-      { name: 'Valvetronic', type: 'special' },
+      { name: '/img/216.png', type: 'image' },
+      { name: '/img/valvetr.webp', type: 'image' },
+      { name: '/img/edificamos.png', type: 'image' },
+      { name: '/img/ee.png', type: 'image' }
     ],
   },
   offer: {
@@ -141,7 +134,8 @@ export const landingData = {
            "Access to Adeptos dashboard"
         ],
         guarantee: "If your AI agent doesn't pay for itself in 30 days, next month is free.",
-        cta: "Get Started"
+        cta: "Get Started",
+        ctaHref: "/audit"
       },
       {
         id: "growth",
@@ -158,6 +152,7 @@ export const landingData = {
         ],
         guarantee: "If your AI agent doesn't generate $2,000 in value within 30 days, next month is free.",
         cta: "Get Started",
+        ctaHref: "/audit",
         popular: true
       },
       {
@@ -174,7 +169,8 @@ export const landingData = {
            "Agent orchestration dashboard"
         ],
         guarantee: "We optimize at no additional cost until it performs. No cap on revisions.",
-        cta: "Book a Call"
+        cta: "Book a Call",
+        ctaHref: "/audit"
       }
     ]
   },
@@ -226,7 +222,7 @@ export const landingData = {
       { icon: 'yt', href: '#' },
     ],
     utilities: [
-      { label: 'BOOK AI AUDIT', icon: '📅', href: '#' },
+      { label: 'BOOK AI AUDIT', icon: '📅', href: '/audit' },
       { label: 'WHATSAPP: +1 216 624 7930', icon: '📱', href: 'https://wa.me/12166247930' },
       { label: 'EMAIL: admin@adeptos.ai', icon: '✉', href: 'mailto:admin@adeptos.ai' },
     ],
@@ -235,6 +231,6 @@ export const landingData = {
   reelSection: {
     title: "SEE IT IN ACTION",
     description: "Real data. Real conversations. Full visibility across every channel.",
-    videoUrl: "/video/reel.mp4"
+    videoUrl: "/reel.mp4"
   }
 };

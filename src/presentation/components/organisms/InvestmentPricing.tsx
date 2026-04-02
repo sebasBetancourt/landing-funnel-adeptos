@@ -5,7 +5,7 @@ export default function InvestmentPricing() {
   const { investment } = landingData;
 
   return (
-    <section className="bg-[#1C2120] py-24 md:py-32 px-6 md:px-12 relative z-30 overflow-hidden">
+    <section className="bg-[#1C2120] py-24 md:py-32 px-4 sm:px-12 relative z-30 overflow-hidden">
       
       {/* Background Accents */}
       <div className="absolute top-0 left-0 w-full h-px bg-white/5" />
@@ -15,7 +15,7 @@ export default function InvestmentPricing() {
         
         {/* Header */}
         <div className="text-center space-y-6 max-w-3xl mx-auto">
-           <h2 className="text-5xl md:text-7xl font-brand font-black uppercase text-white leading-none tracking-tighter italic">
+           <h2 className="text-[28px] sm:text-5xl md:text-7xl font-brand font-black uppercase text-white leading-none tracking-tighter italic">
               {investment.title}
            </h2>
            <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed">
@@ -28,7 +28,7 @@ export default function InvestmentPricing() {
            {investment.tiers?.map((tier, i) => (
              <div 
                key={i} 
-               className={`flex flex-col p-10 md:p-12 rounded-[3.5rem] border transition-all duration-700 relative group overflow-hidden ${
+               className={`flex flex-col p-4 sm:p-10 md:p-12 rounded-[3.5rem] border transition-all duration-700 relative group overflow-hidden ${
                  tier.popular 
                    ? 'bg-primary border-primary text-black scale-105 z-20 shadow-[0_50px_100px_-20px_rgba(212,175,55,0.4)]' 
                    : 'bg-white/5 border-white/10 text-white hover:bg-white/10'
@@ -36,7 +36,7 @@ export default function InvestmentPricing() {
              >
                 {/* Popular Badge */}
                 {tier.popular && (
-                  <div className="absolute top-8 right-8 bg-black text-white px-4 py-2 rounded-full text-[9px] font-black uppercase tracking-widest animate-pulse">
+                  <div className="absolute top-4 right-4 sm:top-8 sm:right-8 bg-black text-white px-4 py-2 rounded-full text-[9px] font-black uppercase tracking-widest animate-pulse">
                      Most Popular
                   </div>
                 )}
@@ -79,7 +79,7 @@ export default function InvestmentPricing() {
                    </p>
                    
                    <Link 
-                     href="#" 
+                     href={tier.ctaHref || "/audit"} 
                      className={`block w-full py-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] text-center transition-all shadow-xl hover:scale-105 active:scale-95 ${
                        tier.popular 
                          ? 'bg-black text-white hover:bg-gray-900' 

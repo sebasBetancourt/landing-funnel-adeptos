@@ -15,19 +15,19 @@ export default function WorkflowStepsSection() {
         
         {/* Header */}
         <div className="text-center space-y-6 max-w-3xl mx-auto">
-           <h2 className="text-5xl md:text-7xl font-brand font-black uppercase text-white leading-none tracking-tighter italic">
+           <h2 className="text-3xl sm:text-5xl md:text-7xl font-brand font-black uppercase text-white leading-none tracking-tighter italic">
               {workflow.title}
            </h2>
-           <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed">
+           <p className="text-gray-400 text-sm sm:text-lg md:text-xl font-medium leading-relaxed">
               {workflow.description}
            </p>
         </div>
 
         {/* Steps Grid - Bold & Numbered */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16">
            {workflow.steps?.map((step, i) => (
-             <div key={i} className="group space-y-6 p-8 bg-white/5 border border-white/5 rounded-[2rem] hover:bg-white/10 hover:border-primary/20 transition-all duration-700">
-                <div className="text-6xl md:text-8xl font-brand font-black text-white/10 group-hover:text-primary/20 transition-colors drop-shadow-sm group-hover:italic group-hover:scale-110 origin-left">
+             <div key={i} className="group space-y-6 p-6 sm:p-8 bg-white/5 border border-white/5 rounded-[2rem] hover:bg-white/10 hover:border-primary/20 transition-all duration-700">
+                <div className="text-5xl sm:text-6xl md:text-8xl font-brand font-black text-white/10 group-hover:text-primary/20 transition-colors drop-shadow-sm group-hover:italic group-hover:scale-110 origin-left">
                    {step.id}
                 </div>
                 <div className="space-y-4">
