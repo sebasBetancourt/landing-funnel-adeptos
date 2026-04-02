@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui;
+  --font-brand: "League Spartan", ui-sans-serif, system-ui;
+
+  --color-primary: #838485;
+  --color-accent: #DCDCDC;
+  --color-bg-dark: #1C2120;
+}
+
+@layer base {
+  :root {
+    --background: #1C2120;
+    --foreground: #ffffff;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+.font-brand {
+  font-family: var(--font-brand);
+}
+
+@keyframes glow-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; filter: drop-shadow(0 0 5px #838485); }
+  50% { transform: scale(1.3); opacity: 0.8; filter: drop-shadow(0 0 15px #838485); }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2.5s infinite ease-in-out;
+}
