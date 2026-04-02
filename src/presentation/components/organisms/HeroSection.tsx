@@ -22,6 +22,7 @@ export default function HeroSection() {
           src={hero.portrait} 
           alt="Founder profile" 
           fill 
+          sizes="(max-width: 1024px) 100vw, 60vw"
           className="object-contain lg:object-left-bottom scale-110 lg:scale-125 origin-left lg:opacity-100 opacity-60"
           style={{ objectFit: 'contain', objectPosition: 'left bottom' }}
           priority
@@ -48,12 +49,20 @@ export default function HeroSection() {
                    </h1>
                 </div>
 
-                <p className="max-w-lg text-base md:text-lg lg:text-xl font-medium text-white/90 drop-shadow-md leading-relaxed px-4">
-                   {hero.description.split('. ')[0]}.
-                   <span className="block mt-4 font-black uppercase text-[10px] md:text-xs tracking-[0.5em] text-primary">
-                     {hero.subText}
-                   </span>
-                </p>
+                <div className="space-y-6">
+                   <p className="max-w-xl text-base md:text-lg lg:text-xl font-medium text-white/90 drop-shadow-md leading-relaxed px-4">
+                      {hero.description}
+                   </p>
+                   
+                   <div className="flex flex-wrap justify-center gap-4 pt-2">
+                      {hero.bullets?.map((bullet, i) => (
+                        <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
+                           <span className="text-primary text-xs">✓</span>
+                           <span className="text-[10px] font-bold uppercase tracking-widest text-white/80">{bullet}</span>
+                        </div>
+                      ))}
+                   </div>
+                </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12 pt-4 w-full">
                    <button className="flex items-center gap-4 group">
