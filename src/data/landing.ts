@@ -232,5 +232,12 @@ export const landingData = {
     title: "SEE IT IN ACTION",
     description: "Real data. Real conversations. Full visibility across every channel.",
     videoUrl: "/reel.mp4"
+  },
+  podcast: {
+    headline: "ADEPTOS PODCAST",
+    description: "Deep dives into AI implementation, scaling strategies, and the future of autonomous business operations with Ryan Hamill.",
+    mockup: "/img/s.png",
+    cover: "/img/_73A8553.JPG",
+    cta: "Listen Now"
   }
 };
